@@ -8,7 +8,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class ParseNewsCommand extends Command
 {
-    protected static $defaultName = 'app:parse-news';
+    protected static $defaultName = 'app:my-project';
 
     protected function configure()
     {

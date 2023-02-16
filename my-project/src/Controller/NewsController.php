@@ -3,19 +3,20 @@
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class NewsController extends AbstractController
 {
     /**
-     * @Route("/news", name="app_news")
+     * @Route("/news", name="news_list")
      */
-    public function index(): JsonResponse
+    public function list(): Response
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/NewsController.php',
+        $news = [ /* array of news items */ ];
+
+        return $this->render('news/list.html.twig', [
+            'news' => $news,
         ]);
     }
 }

@@ -20,7 +20,4 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-    
-    App\Command\ParseNewsCommand:
-    tags: [console.command]
     # please note that last definitions always *replace* previous ones
